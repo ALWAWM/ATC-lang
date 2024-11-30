@@ -1,0 +1,9 @@
+import <iostream>
+import <string>
+maindef ( ARG ) {
+    var a=10;
+    lint b=1384913448;
+    str s="2jdi3";
+    cout<<a<<b<<s<<endl;
+    return 0;
+}
