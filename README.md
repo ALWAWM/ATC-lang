@@ -49,45 +49,50 @@ ATC 语言诞生的初衷是为了帮助那些准备踏入 C++编程世界的初
 
 1. 克隆仓库：
 ```
-git clone [repository_url]
+git clone [[repository_url]](https://github.com/ALWAWM/ATC-lang/ATC-lang.git)
 ```
 
 2. 编写代码：在合适的位置使用 ATC 语言编写你的代码。
 
-3. 运行：在命令行中，输入“编译器目录 你的代码文件路径”。例如，如果编译器位于`./ATC-lang/compiler/AS-ATC`，你的代码文件是`./src/code.atc`，则运行命令为`./ATC-lang/compiler/AS-ATC ./src/code.atc`。
+3. 运行：在命令行中，输入“编译器目录 你的代码文件路径”。例如，如果编译器位于`./ATC-lang/compiler/AS-ATC`，你的代码文件是`./code.atc`，则运行命令为`./ATC-lang/compiler/AS-ATC ./code.atc`。
 
 ## 五、语法示例
 
 ### 1. 输出语句
 ```
-out("Hello, ATC language!");
+fout("Hello, ATC language!\n");
+cout<<"Hello Stream!"<<endl;
 ```
 
 ### 2. 变量声明和赋值
 ```
 var num = 10;
+int num2 = 5;
 str name = "John";
 ```
 
 ### 3. 条件语句
 ```
 if num > 5 {
-    out("Number is greater than 5");
+    fout("Number is greater than 5");
 } else {
-    out("Number is less than or equal to 5");
+    fout("Number is less than or equal to 5");
 }
 ```
 
 ### 4. 循环语句
 ```
 for i in range(5) {
-    out(std::to_string(i));
+    fout(to.str(i));
 }
 ```
 
 ### 5. 函数定义
 ```
 func add(a, b) -> a + b;
+func add2(a, b){
+    return a+b;
+}
 ```
 
 ## 六、贡献
@@ -98,7 +103,7 @@ func add(a, b) -> a + b;
 
 感谢你对 ATC 语言的关注和支持！如果你有任何问题或建议，请随时联系我们。
 
-联系方式：a*****@qq.com
+联系方式：a***@qq.com
 
 ## 七、未来发展
 ATC 语言的开发团队正在努力完善语言的功能和性能。未来，我们计划：
