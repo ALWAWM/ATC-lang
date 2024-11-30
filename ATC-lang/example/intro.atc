@@ -1,0 +1,18 @@
+@atc=21
+import io
+import cstlcont //引入大多数STL模板
+func add(var a,var b) -> a + b;
+func add_func(var a,var b){
+    return a + b;
+}
+maindef(ARG){//int main(int args,char* argv[])
+    cout<<argv[0]<<argv[1]<<endl;
+    if(args < 3){
+        fout("args too small!");//printf
+        return 1;
+    }
+    var add1 = add(argv[0],argv[1]);
+    var add2 = add_func(argv[0],argv[1]);
+    cout<<add1<<add2;
+    //自动return 0
+}

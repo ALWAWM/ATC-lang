@@ -1,0 +1,50 @@
+// 注释
+// 这是我的 atc 语言
+/* 
+多行注释
+*/
+
+import io //引入输入输出
+import cstlcont //引入大多数 STL 模板的容器
+
+// 定义结构体表示学生信息
+struct Student {
+    str name;
+    int age;
+    double grade;
+};
+
+// 函数用于比较两个学生的成绩
+bool compareStudentsByGrade(Student s1, Student s2) -> s1.grade > s2.grade;
+
+maindef() {
+    // 创建一个学生信息的向量
+    vector<Student> students;
+    students.push_back({"Alice", 18, 85.5});
+    students.push_back({"Bob", 19, 90.2});
+    students.push_back({"Charlie", 17, 78.9});
+
+    // 使用算法库对学生信息进行排序
+    sort(students.begin(), students.end(), compareStudentsByGrade);
+
+    // 输出排序后的学生信息
+    for each(Student student in students) {
+        fout("Name: " + student.name + ", Age: " + std::to_string(student.age) + ", Grade: " + std::to_string(student.grade) + "\n");
+    }
+
+    // 使用哈希表存储学生姓名和年龄
+    unordered_map<std::string, int> studentAgeMap;
+    for each(Student student in students) {
+        studentAgeMap[student.name] = student.age;
+    }
+
+    // 查询特定学生的年龄
+    str queryName = "Bob";
+    if (studentAgeMap.find(queryName)!= studentAgeMap.end()) {
+        out(queryName + "'s age is: " + std::to_string(studentAgeMap[queryName]) + "\n");
+    } else {
+        out(queryName + " not found.\n");
+    }
+
+    return;
+}
